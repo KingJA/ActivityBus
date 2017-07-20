@@ -1,5 +1,5 @@
 apply plugin: 'java'
-
+apply plugin: 'com.novoda.bintray-release'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':activitybus-annotations')
@@ -9,3 +9,11 @@ dependencies {
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+publish {
+    userOrg = 'kingja'
+    groupId = 'com.kingja.activitybus'
+    artifactId = 'activitybus-compiler'
+    publishVersion = '1.1.1'
+    desc = 'compiler for activitybus'
+    website = 'https://github.com/KingJA/ActivityBus'
+}

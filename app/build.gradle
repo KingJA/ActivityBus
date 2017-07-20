@@ -24,4 +24,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     annotationProcessor project(':activitybus-compiler')
     compile project(':activitybus-core')
+//    compile 'com.kingja.activitybus:activitybus:1.1.1'
+//    annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.1.1'
 }
+

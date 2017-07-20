@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -25,3 +25,12 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile project(':activitybus-annotations')
 }
+publish {
+    userOrg = 'kingja'
+    groupId = 'com.kingja.activitybus'
+    artifactId = 'activitybus'
+    publishVersion = '1.1.1'
+    desc = 'A smart library for transfering data between Activities.'
+    website = 'https://github.com/KingJA/ActivityBus'
+}
+
