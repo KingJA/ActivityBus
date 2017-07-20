@@ -5,9 +5,9 @@ A smart library for transfering data between Activities. CLICK THE ***STAR***  i
 
 
 ## Supported Types
-* Base type : boolean,byte,char,short,int,long,float,double
-* Base array type : boolean[],byte[],char[],short[],int[],long[],float[],double[]
-* Container : List,Set,Map
+* Base type : 'boolean','byte','char','short','int','long','float','double'
+* Base array type : 'boolean[]'','byte[]'','char[]'','short[]'','int[]'','long[]'','float[]'','double[]''
+* Container : 'List','Set','Map'
 * Serializable : entity implements the Serializable
 
 ## Gradle
@@ -21,8 +21,8 @@ dependencies {
 ## Usage
 ### step 1
 
-declare **@Passenger** on the variable that your want to transfer
-declare **@ActivityBus** on the class if your want to call **startActivityForResult()**
+declare **@Passenger** on the variables that your want to transfer,declare **@ActivityBus** on the class and set the
+requestCode if your want to call **startActivityForResult()**
 
 ```java
 @ActivityBus(requestCode = 100)
@@ -38,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 ### step 2
-call **register()** before you useing the data
+After compiling the project, it will create a generate java File named like SecondActivityBus.java(ToActivity name+Bus),then call **register()** before you useing the data
 
 ```java
 @ActivityBus(requestCode = 100)
@@ -55,7 +55,7 @@ public class SecondActivity extends AppCompatActivity {
 
 ```
 ### step 3
-call **goActivity()** to transfer the variables
+call **goActivity()** to transfer the variables in the 'FromActivity',here is MainActivity.
 
 ```java
 public class MainActivity extends AppCompatActivity {
