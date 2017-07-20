@@ -1,23 +1,63 @@
 # ActivityBus
-A smart switchable button,support multiple tabs. CLICK THE ***STAR***  if it's useful for you.
+A smart library for transfering data between Activities. CLICK THE ***STAR***  if it's useful for you.
 
 ## Preview
 
 
-
+## Supported Types
+* Base type : boolean,byte,char,short,int,long,float,double
+* Base array type : boolean[],byte[],char[],short[],int[],long[],float[],double[]
+* Container : List,Set,Map
+* Serializable : entity implements the Serializable
 
 ## Gradle
 ```groovy
+dependencies {
     compile 'com.kingja.activitybus:activitybus:1.1.1'
     annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.1.1'
+}
 ```
 
 ## Usage
 ### step 1
-
-
+```java
+@ActivityBus(requestCode = 100)
+public class SecondActivity extends AppCompatActivity {
+    @Passenger
+    public int aInt;
+    @Passenger
+    public String aString;
+    @Passenger
+    public Person aPerson;
+    @Passenger
+    public List<Person> aPersons;
+}
+```
 ### step 2
 
+```java
+@ActivityBus(requestCode = 100)
+public class SecondActivity extends AppCompatActivity {
+...
+@Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        SecondActivityBus.register(this);
+    }
+...
+}
+
+```
+### step 3
+
+```java
+public class MainActivity extends AppCompatActivity {
+...
+SecondActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
+...
+}
+```
 
 ## Changelog
 

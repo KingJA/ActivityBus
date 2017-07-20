@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goSecondActivity(View view) {
-        SecondActivityBus.goActivity(this,1,true,(byte)1,(short) 1,1L,'A',1f,1d,"Hello",new Person("Entity"),
- personList,personSet,personMap);
+        SecondActivityBus.goActivity(this, 1, true, (byte) 1, (short) 1, 1L, 'A', 1f, 1d, "Hello", new Person("Entity"),
+                personList, personSet, personMap);
     }
 }
