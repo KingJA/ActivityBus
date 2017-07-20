@@ -1,0 +1,1 @@
+include ':app', ':activitybus-annotations', ':activitybus-compiler', ':activitybus-core'

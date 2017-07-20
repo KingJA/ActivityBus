@@ -1,0 +1,1 @@
+A smart library for transfering data between Activities.
