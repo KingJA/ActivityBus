@@ -69,7 +69,7 @@ SecondActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
 
 ## Changelog
 
-**v1.1.1**
+**Version 1.1.1 (2017-07-20)**
 - Initial release .
 
 ## Contact me
