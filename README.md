@@ -20,6 +20,10 @@ dependencies {
 
 ## Usage
 ### step 1
+
+declare **@Passenger** on the variable that your want to transfer
+declare **@ActivityBus** on the class if your want to call **startActivityForResult()**
+
 ```java
 @ActivityBus(requestCode = 100)
 public class SecondActivity extends AppCompatActivity {
@@ -34,6 +38,7 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 ### step 2
+call **register()** before you useing the data
 
 ```java
 @ActivityBus(requestCode = 100)
@@ -50,6 +55,7 @@ public class SecondActivity extends AppCompatActivity {
 
 ```
 ### step 3
+call **goActivity()** to transfer the variables
 
 ```java
 public class MainActivity extends AppCompatActivity {
