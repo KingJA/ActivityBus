@@ -20,7 +20,7 @@ import javax.lang.model.element.VariableElement;
 import javax.lang.model.util.Elements;
 
 import kingja.activitybus.annotations.ActivityBus;
-import kingja.activitybus.annotations.Passenger;
+import kingja.activitybus.annotations.RequestParam;
 
 @AutoService(Processor.class)
 public class ComponentBusProcessor extends AbstractProcessor {
@@ -41,7 +41,7 @@ public class ComponentBusProcessor extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         Set<String> annotationTypes = new LinkedHashSet<>();
-        annotationTypes.add(Passenger.class.getCanonicalName());
+        annotationTypes.add(RequestParam.class.getCanonicalName());
         return annotationTypes;
     }
 
@@ -54,7 +54,7 @@ public class ComponentBusProcessor extends AbstractProcessor {
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnvironment) {
         generatedBodys.clear();
 
-        Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(Passenger.class);
+        Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(RequestParam.class);
         for (Element element : elements) {
             VariableElement variableElement = (VariableElement) element;
             TypeElement typeElement = (TypeElement) variableElement.getEnclosingElement();

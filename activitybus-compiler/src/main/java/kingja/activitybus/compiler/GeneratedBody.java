@@ -34,14 +34,10 @@ public class GeneratedBody {
     private final String SUFFIX = "Bus";
     private final String packageName;
     private final String fullName;
-    private boolean goWithRequestCode;
     private ClassName ClassName_Activity = ClassName.get("android.app", "Activity");
     private ClassName ClassName_Intent = ClassName.get("android.content", "Intent");
     private ClassName ClassName_String = ClassName.get("java.lang", "String");
     private ClassName ClassName_Serializable = ClassName.get("java.io", "Serializable");
-    private ClassName ClassName_List = ClassName.get("java.util", "List");
-    private ClassName ClassName_Set = ClassName.get("java.util", "Set");
-    private ClassName ClassName_Map = ClassName.get("java.util", "Map");
 
     public GeneratedBody(Messager mMessager, Elements mElementUtils, TypeElement typeElement) {
         this.mMessager = mMessager;
@@ -57,7 +53,6 @@ public class GeneratedBody {
     }
 
     public void setRequestCode(int requestCode) {
-        goWithRequestCode = true;
         this.requestCode = requestCode;
     }
 
@@ -99,7 +94,7 @@ public class GeneratedBody {
                         .getSimpleName().toString(), ClassName_Serializable);
             }
         }
-        if (goWithRequestCode) {
+        if (requestCode>0) {
             builder.addStatement("activity.startActivityForResult(intent," + requestCode + ")");
         } else {
             builder.addStatement("activity.startActivity(intent)");

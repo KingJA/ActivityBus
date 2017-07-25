@@ -22,25 +22,25 @@ dependencies {
 ## Usage in 3 steps
 ### step 1
 
-declare **@Passenger** on the variables that your want to transfer,declare **@ActivityBus** on the class and set the
+declare **@RequestParam** on the variables that your want to transfer,declare **@ActivityBus** on the class and set the
 requestCode if your want to call **startActivityForResult()**
 
 ```java
 @ActivityBus(requestCode = 100)
 public class SecondActivity extends AppCompatActivity {
-    @Passenger
+    @RequestParam
     public int aInt;
-    @Passenger
+    @RequestParam
     public String aString;
-    @Passenger
+    @RequestParam
     public Person aPerson;
-    @Passenger
+    @RequestParam
     public List<Person> aPersons;
     ...
 }
 ```
 ### step 2
-Upon compilation, ActivityBus generates a class for SecondActivityBus([Activity Name] + Bus),,then call **register()** before you useing the variables
+Upon compilation, ActivityBus generates a class as SecondActivityBus([Activity Name] + Bus),then call **register()** before you useing the variables
 
 ```java
 @ActivityBus(requestCode = 100)

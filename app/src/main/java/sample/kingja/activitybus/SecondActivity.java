@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import kingja.activitybus.annotations.ActivityBus;
-import kingja.activitybus.annotations.Passenger;
+import kingja.activitybus.annotations.RequestParam;
 import sample.kingja.componentbus.R;
 
 
@@ -22,49 +22,49 @@ import sample.kingja.componentbus.R;
  */
 @ActivityBus(requestCode = 100)
 public class SecondActivity extends AppCompatActivity {
-    @Passenger
+    @RequestParam
     public int aInt;
-    @Passenger
+    @RequestParam
     public boolean aBoolean;
-    @Passenger
+    @RequestParam
     public byte aByte;
-    @Passenger
+    @RequestParam
     public short aShort;
-    @Passenger
+    @RequestParam
     public long aLong;
-    @Passenger
+    @RequestParam
     public char aChar;
-    @Passenger
+    @RequestParam
     public float aFloat;
-    @Passenger
+    @RequestParam
     public double aDouble;
-    @Passenger
+    @RequestParam
     public String aString;
-    @Passenger
+    @RequestParam
     public Person aPerson;
-    @Passenger
+    @RequestParam
     public List<Person> aPersons;
-    @Passenger
+    @RequestParam
     public Set<Person> aSet;
-    @Passenger
+    @RequestParam
     public Map<Integer, Person> aMap;
-//    @Passenger
+//    @RequestParam
 //    public String[] aStringArray;
-//    @Passenger
+//    @RequestParam
 //    public boolean[] aBooleanArray;
-//    @Passenger
+//    @RequestParam
 //    public byte[] aByteArray;
-//    @Passenger
+//    @RequestParam
 //    public char[] aCharArray;
-//    @Passenger
+//    @RequestParam
 //    public short[] aShortArray;
-//    @Passenger
+//    @RequestParam
 //    public int[] aIntArray;
-//    @Passenger
+//    @RequestParam
 //    public long[] aLongArray;
-//    @Passenger
+//    @RequestParam
 //    public float[] aFloatArray;
-//    @Passenger
+//    @RequestParam
 //    public double[] aDoubleArray;
 
 
