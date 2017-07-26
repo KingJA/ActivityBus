@@ -20,14 +20,15 @@ dependencies {
 ```
 
 ## Getting Started
-### Activity step 1
+Usage in Activity
+### step 1 (Annotate)
 
 * Annotate fields with **@RequestParam** for AndroidBus to transfer them to target Activity.
 * Annotate class of target Activity with **@ActivityBus** and set the requestCode if your want to call **startActivityForResult()**
 
 ```java
 @ActivityBus(requestCode = 100)
-public class SecondActivity extends AppCompatActivity {
+public class TargetActivity extends AppCompatActivity {
     @RequestParam
     public int aInt;
     @RequestParam
@@ -39,36 +40,39 @@ public class SecondActivity extends AppCompatActivity {
     ...
 }
 ```
-### Activity step 2
-Upon compilation, ActivityBus generates a class as SecondActivityBus([Activity Name] + Bus),then call **register()** before you useing the variables
 
-```java
-@ActivityBus(requestCode = 100)
-public class SecondActivity extends AppCompatActivity {
-...
-@Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
-        SecondActivityBus.register(this);
-    }
-...
-}
-
-```
-### Activity step 3
+### step 2 (transfer data)
 call **goActivity()** to transfer the variables in the 'FromActivity',here is MainActivity.
 
 ```java
 public class MainActivity extends AppCompatActivity {
 ...
-SecondActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
+TargetActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
 ...
 }
 ```
 
+### step 3 (get data)
+Upon compilation, ActivityBus generates a class as TargetActivityBus([Activity Name] + Bus),then call **register()** before you useing the variables
 
-### Fragment step 1
+```java
+@ActivityBus(requestCode = 100)
+public class TargetActivity extends AppCompatActivity {
+...
+@Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        TargetActivityBus.register(this);
+    }
+...
+}
+
+```
+
+
+Usage in Fragment is more simple than in Activity,it only needs 2 steps.
+### step 1 (Annotate)
 
 ```java
 public class TargetFragment extends Fragment {
@@ -80,7 +84,7 @@ public class TargetFragment extends Fragment {
 }
 ```
 
-### Fragment step 2
+### step 2 (transfer data)
 
 ```java
 public class MainActivity extends AppCompatActivity {
