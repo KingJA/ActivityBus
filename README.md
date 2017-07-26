@@ -1,7 +1,9 @@
-# ActivityBus
+ActivityBus
+---
 A smart library for transfering data between Activities. CLICK THE ***STAR***  if it's useful for you.
 
-## Diagrammatize
+Diagrammatize
+---
 
 ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data,in order to keep your code clean and your job efficient.
 
@@ -19,9 +21,10 @@ dependencies {
 }
 ```
 
-## Getting Started
-Usage in Activity
-### Step 1 (Annotate)
+Getting Started
+---
+### Usage in Activity
+###### Step 1 (Annotate)
 
 * Annotate fields with **@RequestParam** for AndroidBus to transfer them to target Activity.
 * Annotate class of target Activity with **@ActivityBus** and set the requestCode if your want to call **startActivityForResult()**
@@ -41,7 +44,7 @@ public class TargetActivity extends AppCompatActivity {
 }
 ```
 
-### Step 2 (transfer data)
+###### Step 2 (transfer data)
 Upon compilation, ActivityBus generates a class as TargetActivityBus([Activity Name] + Bus),call **goActivity()** to transfer the data in the 'FromActivity',here is MainActivity.
 
 ```java
@@ -52,7 +55,7 @@ TargetActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
 }
 ```
 
-### Step 3 (get data)
+###### Step 3 (get data)
 Call **register()** before you useing the annotated fields.
 
 ```java
@@ -70,9 +73,9 @@ public class TargetActivity extends AppCompatActivity {
 
 ```
 
-
-Usage in Fragment is more simple than in Activity,it only needs 2 steps.
-### Step 1 (Annotate)
+### Usage in Fragment
+Usage in **Fragment** is more simple than in Activity,it only needs 2 steps.
+###### Step 1 (Annotate)
 
 ```java
 public class TargetFragment extends Fragment {
@@ -84,7 +87,7 @@ public class TargetFragment extends Fragment {
 }
 ```
 
-### Step 2 (transfer data)
+###### Step 2 (transfer data)
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -96,18 +99,21 @@ getSupportFragmentManager().beginTransaction().add(R.id.fl_fragment, targetFragm
 ```
 
 
-## Changelog
+Changelog
+---
 
 **Version 1.1.1 (2017-07-20)**
 - Initial release .
 
-## Contact me
+Contact me
+---
 Any questions,Welcome to contact me.
 * [Blog](http://www.jianshu.com/u/8a1a8ed656e8)
 * Email : kingjavip@gmail.com
 * QQ : 87049319
 
-## License
+License
+---
 
     Copyright 2017 KingJA
 
