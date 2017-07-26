@@ -1,6 +1,5 @@
 package kingja.activitybus.compiler;
 
-import com.google.auto.service.AutoService;
 
 import java.lang.annotation.Annotation;
 import java.util.HashMap;
@@ -12,7 +11,6 @@ import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.Filer;
 import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;
-import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
@@ -26,8 +24,7 @@ import kingja.activitybus.annotations.RequestParam;
 
 import static javax.lang.model.element.Modifier.PRIVATE;
 
-@AutoService(Processor.class)
-public class ComponentBusProcessor extends AbstractProcessor {
+public class ActivityBusProcessor extends AbstractProcessor {
 
     private Messager mMessager;
     private Map<TypeElement, GeneratedFile> generatedBodys = new HashMap<>();

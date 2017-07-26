@@ -3,7 +3,6 @@ apply plugin: 'com.novoda.bintray-release'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':activitybus-annotations')
-    compile 'com.google.auto.service:auto-service:1.0-rc2'
     compile 'com.squareup:javapoet:1.9.0'
 }
 

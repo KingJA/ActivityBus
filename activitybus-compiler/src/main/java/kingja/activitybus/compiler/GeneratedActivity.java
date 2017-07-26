@@ -10,7 +10,6 @@ import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.lang.model.util.Elements;
-import javax.tools.Diagnostic;
 
 import kingja.activitybus.annotations.ActivityBus;
 
@@ -35,7 +34,6 @@ public class GeneratedActivity extends GeneratedFile {
         super(mMessager, mElementUtils, typeElement);
     }
 
-
     @Override
     protected TypeSpec.Builder createTypeSpec(TypeSpec.Builder typeSpec) {
         return typeSpec.addMethod(createGoActivityMethod()).addMethod(createRegisterMethod());
@@ -54,7 +52,6 @@ public class GeneratedActivity extends GeneratedFile {
         for (VariableElement variable : params) {
             TypeName typeName = getTypeName(variable);
 
-            mMessager.printMessage(Diagnostic.Kind.NOTE, "getTypeName:" + variable.asType().toString());
 
             if (typeName.isPrimitive() || ClassName_String.equals(typeName) || isArraysType(typeName) || ("java.lang" +
                     ".String[]").equals(typeName.toString())) {
@@ -92,7 +89,6 @@ public class GeneratedActivity extends GeneratedFile {
         String var = variable.getSimpleName().toString();
         TypeName typeClassName = getTypeName(variable);
         if (typeClassName.isPrimitive()) {
-            mMessager.printMessage(Diagnostic.Kind.NOTE, "isPrimitive:" + typeClassName.toString());
             if (TypeName.BOOLEAN.equals(typeClassName)) {
                 builder.addStatement("activity." + var + "=activity.getIntent().getBooleanExtra($S,false)", var);
             } else if (TypeName.BYTE.equals(typeClassName)) {
@@ -126,7 +122,5 @@ public class GeneratedActivity extends GeneratedFile {
             }
         }
     }
-
-
 
 }

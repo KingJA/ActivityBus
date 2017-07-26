@@ -1,6 +1,5 @@
 package kingja.activitybus.compiler;
 
-import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 
