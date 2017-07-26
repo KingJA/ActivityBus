@@ -21,7 +21,7 @@ dependencies {
 
 ## Getting Started
 Usage in Activity
-### step 1 (Annotate)
+### Step 1 (Annotate)
 
 * Annotate fields with **@RequestParam** for AndroidBus to transfer them to target Activity.
 * Annotate class of target Activity with **@ActivityBus** and set the requestCode if your want to call **startActivityForResult()**
@@ -41,8 +41,8 @@ public class TargetActivity extends AppCompatActivity {
 }
 ```
 
-### step 2 (transfer data)
-call **goActivity()** to transfer the variables in the 'FromActivity',here is MainActivity.
+### Step 2 (transfer data)
+Upon compilation, ActivityBus generates a class as TargetActivityBus([Activity Name] + Bus),call **goActivity()** to transfer the data in the 'FromActivity',here is MainActivity.
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -52,8 +52,8 @@ TargetActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
 }
 ```
 
-### step 3 (get data)
-Upon compilation, ActivityBus generates a class as TargetActivityBus([Activity Name] + Bus),then call **register()** before you useing the variables
+### Step 3 (get data)
+Call **register()** before you useing the annotated fields.
 
 ```java
 @ActivityBus(requestCode = 100)
@@ -72,7 +72,7 @@ public class TargetActivity extends AppCompatActivity {
 
 
 Usage in Fragment is more simple than in Activity,it only needs 2 steps.
-### step 1 (Annotate)
+### Step 1 (Annotate)
 
 ```java
 public class TargetFragment extends Fragment {
@@ -84,7 +84,7 @@ public class TargetFragment extends Fragment {
 }
 ```
 
-### step 2 (transfer data)
+### Step 2 (transfer data)
 
 ```java
 public class MainActivity extends AppCompatActivity {
