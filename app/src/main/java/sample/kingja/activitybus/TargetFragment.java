@@ -15,12 +15,12 @@ import android.view.ViewGroup;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class SampleFragment extends Fragment {
+public class TargetFragment extends Fragment {
 
-    private static final String TAG = "SampleFragment";
+    private static final String TAG = "TargetFragment";
 
-    public static SampleFragment getInstance(int requestParam) {
-        SampleFragment instance = new SampleFragment();
+    public static TargetFragment getInstance(int requestParam) {
+        TargetFragment instance = new TargetFragment();
         Bundle bundle = new Bundle();
         bundle.putInt("requestParam", requestParam);
         instance.setArguments(bundle);

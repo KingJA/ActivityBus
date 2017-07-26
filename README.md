@@ -22,8 +22,8 @@ dependencies {
 ## Usage in 3 steps
 ### step 1
 
-declare **@RequestParam** on the variables that your want to transfer,declare **@ActivityBus** on the class and set the
-requestCode if your want to call **startActivityForResult()**
+* Annotate fields with **@RequestParam** for AndroidBus to transfer them to target Activity.
+* Annotate class of target Activity with **@ActivityBus** and set the requestCode if your want to call **startActivityForResult()**
 
 ```java
 @ActivityBus(requestCode = 100)

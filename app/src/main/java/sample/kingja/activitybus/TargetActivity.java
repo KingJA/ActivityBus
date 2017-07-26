@@ -21,7 +21,7 @@ import sample.kingja.componentbus.R;
  * Email:kingjavip@gmail.com
  */
 @ActivityBus(requestCode = 100)
-public class SecondActivity extends AppCompatActivity {
+public class TargetActivity extends AppCompatActivity {
     @RequestParam
     public int aInt;
     @RequestParam
