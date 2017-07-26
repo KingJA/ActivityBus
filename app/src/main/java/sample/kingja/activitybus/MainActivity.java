@@ -17,21 +17,27 @@ public class MainActivity extends AppCompatActivity {
     private List<Person> personList = new ArrayList<>();
     private Set<Person> personSet = new HashSet<>();
     private Map<Integer, Person> personMap = new HashMap<>();
-
+    private String[] stringArray=new String[]{"Michael Jordan", "Kobe Bryant", "LeBron James"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        for (int i = 0; i < 2; i++) {
-            personList.add(new Person("List" + i));
-            personSet.add(new Person("Set" + i));
-            personMap.put(i, new Person("Map" + i));
+        for (int i = 0; i < stringArray.length; i++) {
+            personList.add(new Person(stringArray[i]));
+            personSet.add(new Person(stringArray[i]));
+            personMap.put(i, new Person(stringArray[i]));
         }
     }
 
-    public void goSecondActivity(View view) {
-        SecondActivityBus.goActivity(this, 1, true, (byte) 1, (short) 1, 1L, 'A', 1f, 1d, "Hello", new Person("Entity"),
-                personList, personSet, personMap);
+    public void goTargetActivity(View view) {
+        TargetActivityBus.goActivity(this, 1, true, (byte) 1, (short) 1, 1L, 'A', 1f, 1d, "Jordan", new Person
+                ("Jordan"), personList, personSet, personMap,stringArray );
+    }
+
+    public void goTargetFragment(View view) {
+        TargetFragment targetFragment = TargetFragmentBus.newInstance(1, true, (byte) 1, (short) 1, 1L, 'A', 1f, 1d,
+                "Jordan", new Person("Jordan"), personList, personSet, personMap, stringArray);
+        getSupportFragmentManager().beginTransaction().add(R.id.fl_fragment, targetFragment).commit();
     }
 }

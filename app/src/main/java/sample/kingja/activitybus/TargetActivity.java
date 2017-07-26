@@ -23,9 +23,9 @@ import sample.kingja.componentbus.R;
 @ActivityBus(requestCode = 100)
 public class TargetActivity extends AppCompatActivity {
     @RequestParam
-    public int aInt;
+    protected int aInt;
     @RequestParam
-    public boolean aBoolean;
+    boolean aBoolean;
     @RequestParam
     public byte aByte;
     @RequestParam
@@ -48,8 +48,8 @@ public class TargetActivity extends AppCompatActivity {
     public Set<Person> aSet;
     @RequestParam
     public Map<Integer, Person> aMap;
-//    @RequestParam
-//    public String[] aStringArray;
+    @RequestParam
+    public String[] aStringArray;
 //    @RequestParam
 //    public boolean[] aBooleanArray;
 //    @RequestParam
@@ -67,12 +67,11 @@ public class TargetActivity extends AppCompatActivity {
 //    @RequestParam
 //    public double[] aDoubleArray;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
-        SecondActivityBus.register(this);
+        setContentView(R.layout.activity_target);
+        TargetActivityBus.register(this);
         ((TextView) findViewById(R.id.tv_booean)).setText("Boolean : " + aBoolean);
         ((TextView) findViewById(R.id.tv_char)).setText("Char : " + aChar);
         ((TextView) findViewById(R.id.tv_byte)).setText("Byte : " + aByte);
@@ -86,6 +85,20 @@ public class TargetActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.tv_list)).setText("List : " + aPersons.toString());
         ((TextView) findViewById(R.id.tv_set)).setText("Set : " + aSet.toString());
         ((TextView) findViewById(R.id.tv_map)).setText("Map : " + aMap.toString());
+        ((TextView) findViewById(R.id.tv_map)).setText("StringArray : " + printArray(aStringArray));
+    }
+
+    private String printArray(String[] stringArray) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < stringArray.length; i++) {
+            sb.append(stringArray[i]);
+            if (i != stringArray.length - 1) {
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
 }

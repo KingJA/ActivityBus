@@ -69,7 +69,8 @@
         android:id="@+id/tv_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="6dp"/> <TextView
+        android:padding="6dp"/>
+    <TextView
         android:id="@+id/tv_set"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,6 +78,12 @@
 
     <TextView
         android:id="@+id/tv_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"/>
+
+    <TextView
+        android:id="@+id/tv_stringArray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="6dp"/>

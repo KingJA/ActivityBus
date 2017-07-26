@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sample.kingja.componentbus.sample.kingja.activitybus.MainActivity"
-    android:gravity="center"
-    android:padding="24dp">
+    android:orientation="vertical"
+    android:padding="12dp">
 
     <Button
-        android:onClick="goSecondActivity"
-        android:text="携带数据跳转"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp"/>
+        android:onClick="goTargetActivity"
+        android:text="传递数据到TargetActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goTargetFragment"
+        android:text="传递数据到TargetFragment"/>
+    <TextView
+        android:padding="12dp"
+        android:gravity="center"
+        android:text="TargetFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:background="#e7e7e7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </ScrollView>
 </LinearLayout>
