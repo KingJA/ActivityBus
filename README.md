@@ -1,11 +1,11 @@
 ActivityBus
 ---
-A smart library for transfering data between Activities. CLICK THE ***STAR***  if it's useful for you.
+ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient. CLICK THE ***STAR***  if it's useful for you.
 
 Diagrammatize
 ---
 
-ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data,in order to keep your code clean and your job efficient.
+
 
 ## Supported Types
 * Base type : `boolean`,`byte`,`char`,`short`,`int`,`long`,`float`,`double`,`String`
