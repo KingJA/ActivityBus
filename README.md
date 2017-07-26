@@ -19,8 +19,8 @@ dependencies {
 }
 ```
 
-## Usage in 3 steps
-### step 1
+## Getting Started
+### Activity step 1
 
 * Annotate fields with **@RequestParam** for AndroidBus to transfer them to target Activity.
 * Annotate class of target Activity with **@ActivityBus** and set the requestCode if your want to call **startActivityForResult()**
@@ -39,7 +39,7 @@ public class SecondActivity extends AppCompatActivity {
     ...
 }
 ```
-### step 2
+### Activity step 2
 Upon compilation, ActivityBus generates a class as SecondActivityBus([Activity Name] + Bus),then call **register()** before you useing the variables
 
 ```java
@@ -56,7 +56,7 @@ public class SecondActivity extends AppCompatActivity {
 }
 
 ```
-### step 3
+### Activity step 3
 call **goActivity()** to transfer the variables in the 'FromActivity',here is MainActivity.
 
 ```java
@@ -66,6 +66,31 @@ SecondActivityBus.goActivity(this,1,"Hello",new Person("Entity"),personList);
 ...
 }
 ```
+
+
+### Fragment step 1
+
+```java
+public class TargetFragment extends Fragment {
+    @RequestParam
+    public int aInt;
+    @RequestParam
+    public String aString;
+    ...
+}
+```
+
+### Fragment step 2
+
+```java
+public class MainActivity extends AppCompatActivity {
+...
+TargetFragment targetFragment = TargetFragmentBus.newInstance(1,"Hello");
+getSupportFragmentManager().beginTransaction().add(R.id.fl_fragment, targetFragment).commit();
+...
+}
+```
+
 
 ## Changelog
 
