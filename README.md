@@ -1,6 +1,6 @@
 ActivityBus
 ---
-ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient. CLICK THE ***STAR***  if it's useful for you.
+ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient.
 
 Diagrammatize
 ---
