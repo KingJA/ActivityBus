@@ -9,10 +9,10 @@ dependencies {
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 publish {
-    userOrg = 'kingja'
-    groupId = 'com.kingja.activitybus'
     artifactId = 'activitybus-compiler'
-    publishVersion = '1.1.1'
-    desc = 'compiler for activitybus'
-    website = 'https://github.com/KingJA/ActivityBus'
+    userOrg = rootProject.ext.userOrg
+    groupId = rootProject.ext.groupId
+    publishVersion = rootProject.ext.publishVersion
+    desc =rootProject.ext.desc
+    website = rootProject.ext.website
 }
