@@ -1,3 +1,4 @@
+![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
 ActivityBus
 ---
 ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient.
