@@ -2,9 +2,9 @@
 ActivityBus
 ---
 ActivtyBus基于编译时注解，自动生成帮助类，实现Activity和Activityt之间，Activity和Fragment之间的一键数值传值,避免了重写模板代码，提高开发效率。
-![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
-中文 | [English](https://github.com/KingJA/ActivityBus/blob/master/README.md)
 
+中文 | [English](https://github.com/KingJA/ActivityBus/blob/master/README.md)
+![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
 ## 支持的传值类型
 * Base type : `boolean`,`byte`,`char`,`short`,`int`,`long`,`float`,`double`,`String`
 * Base array type : `boolean[]`,`byte[]`,`char[]`,`short[]`,`int[]`,`long[]`,`float[]`,`double[]`,`String[]`

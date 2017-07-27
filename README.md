@@ -2,9 +2,9 @@
 ActivityBus
 ---
 ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient.
-![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
-English | [中文](https://github.com/KingJA/ActivityBus/blob/master/README_CN.md)
 
+English | [中文](https://github.com/KingJA/ActivityBus/blob/master/README_CN.md)
+![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
 ## Supported Types
 * Base type : `boolean`,`byte`,`char`,`short`,`int`,`long`,`float`,`double`,`String`
 * Base array type : `boolean[]`,`byte[]`,`char[]`,`short[]`,`int[]`,`long[]`,`float[]`,`double[]`,`String[]`
