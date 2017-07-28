@@ -1,7 +1,6 @@
-
 ActivityBus
 ---
-ActivityBus provides a simple annotation-based API,generates a helper class to transfer various types of data between Activities and from Activity to Fragment,in order to keep your code clean and your job efficient.
+ActivityBus provides a simple annotation-based API, generates a helper class to transfer various types of data from Activity to Activity and Activity to Fragment, in order to keep your code clean and your job efficient.
 
 English | [中文](https://github.com/KingJA/ActivityBus/blob/master/README_CN.md)
 ![](https://github.com/KingJA/ActivityBus/blob/master/res/activitybus.png)
@@ -43,7 +42,7 @@ public class TargetActivity extends AppCompatActivity {
 ```
 
 ###### Step 2 (transfer data)
-Upon compilation, ActivityBus generates a class as TargetActivityBus([Activity Name] + Bus),call **goActivity()** to transfer the data in the 'FromActivity',here is MainActivity.
+Upon compilation, ActivityBus will generate a class such as TargetActivityBus ([**Activity Name**] + **Bus**), then call **goActivity()** to transfer the data in the `FromActivity`, here is MainActivity.
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -99,9 +98,11 @@ getSupportFragmentManager().beginTransaction().add(R.id.fl_fragment, targetFragm
 
 Changelog
 ---
+**Version 1.2.5 (2017-07-28)**
+- add Fragment case.
 
 **Version 1.1.1 (2017-07-20)**
-- Initial release .
+- Initial release.
 
 Contact me
 ---
