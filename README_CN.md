@@ -14,8 +14,8 @@ ActivtyBus基于编译时注解，自动生成帮助类，实现Activity和Activ
 ## 下载
 ```groovy
 dependencies {
-    compile 'com.kingja.activitybus:activitybus:1.1.1'
-    annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.1.1'
+    compile 'com.kingja.activitybus:activitybus:1.2.5'
+    annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.2.5'
 }
 ```
 

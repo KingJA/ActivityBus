@@ -14,8 +14,8 @@ English | [中文](https://github.com/KingJA/ActivityBus/blob/master/README_CN.m
 ## Download
 ```groovy
 dependencies {
-    compile 'com.kingja.activitybus:activitybus:1.1.1'
-    annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.1.1'
+    compile 'com.kingja.activitybus:activitybus:1.2.5'
+    annotationProcessor 'com.kingja.activitybus:activitybus-compiler:1.2.5'
 }
 ```
 
