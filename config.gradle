@@ -9,7 +9,7 @@ ext {
 
     userOrg = 'kingja'
     groupId = 'com.kingja.activitybus'
-    publishVersion = '1.2.0'
+    publishVersion = '1.2.5'
     desc = 'A smart library for transfering data between Activities.'
     website = 'https://github.com/KingJA/ActivityBus'
 }

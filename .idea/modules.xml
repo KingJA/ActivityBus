@@ -3,14 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ActivityBus.iml" filepath="$PROJECT_DIR$/ActivityBus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ActivityBus.iml" filepath="$PROJECT_DIR$/ActivityBus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/activitybus-annotations/activitybus-annotations.iml" filepath="$PROJECT_DIR$/activitybus-annotations/activitybus-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitybus-annotations/activitybus-annotations.iml" filepath="$PROJECT_DIR$/activitybus-annotations/activitybus-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitybus-compiler/activitybus-compiler.iml" filepath="$PROJECT_DIR$/activitybus-compiler/activitybus-compiler.iml" />
-      <module fileurl="file://$PROJECT_DIR$/activitybus-compiler/activitybus-compiler.iml" filepath="$PROJECT_DIR$/activitybus-compiler/activitybus-compiler.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitybus-core/activitybus-core.iml" filepath="$PROJECT_DIR$/activitybus-core/activitybus-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/activitybus-core/activitybus-core.iml" filepath="$PROJECT_DIR$/activitybus-core/activitybus-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

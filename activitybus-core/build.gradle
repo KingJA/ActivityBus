@@ -23,7 +23,9 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-    compile project(':activitybus-annotations')
+//    compile project(':activitybus-annotations')
+    compile "com.kingja.activitybus:activitybus-annotation:$rootProject.ext.publishVersion"
+
 }
 publish {
     artifactId = 'activitybus'

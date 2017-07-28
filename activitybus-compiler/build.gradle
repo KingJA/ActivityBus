@@ -2,12 +2,14 @@ apply plugin: 'java'
 apply plugin: 'com.novoda.bintray-release'
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':activitybus-annotations')
     compile 'com.squareup:javapoet:1.9.0'
+//    compile project(':activitybus-annotations')
+    compile "com.kingja.activitybus:activitybus-annotation:$rootProject.ext.publishVersion"
 }
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
 publish {
     artifactId = 'activitybus-compiler'
     userOrg = rootProject.ext.userOrg
